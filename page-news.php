@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * News Page Template
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -34,7 +34,7 @@ get_header();
 			while ( $news_posts -> have_posts() ) {
 				$news_posts -> the_post(); ?>
 
-			
+				<!-- AOS, see js/scroll-animate to adjust -->
 				<article data-aos="fade-up">
 
 					<a href=" <?php the_permalink(); ?> ">
@@ -65,8 +65,6 @@ get_header();
 			the_post();
 
 			
-
-			// display news blog posts
 
 
 		endwhile; // End of the loop.

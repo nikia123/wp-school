@@ -90,3 +90,7 @@ package-lock.json
 *.swp
 *.vi
 *~
+
+# Style.css temporarily to avoid conflicts#
+############################################
+style.css

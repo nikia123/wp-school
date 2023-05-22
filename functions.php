@@ -143,9 +143,17 @@ add_action( 'widgets_init', 'bazinga_widgets_init' );
  */
 function bazinga_scripts() {
 	wp_enqueue_style( 'bazinga-style', get_stylesheet_uri(), array(), _S_VERSION );
+
 	wp_style_add_data( 'bazinga-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'bazinga-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
+	// AOS Enqueue: https://michalsnik.github.io/aos/
+	// Guide from: https://kylerboudreau.com/how-to-use-aos-with-wordpress/
+    wp_enqueue_style('AOS', 'https://unpkg.com/aos@2.3.1/dist/aos.css');
+    wp_enqueue_script('AOS', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array('jquery'), null, true);
+    wp_enqueue_script('scroll-animate', get_template_directory_uri() . '/js/scroll-animate.js', array('AOS'), null, true);
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -179,4 +187,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

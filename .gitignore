@@ -91,6 +91,6 @@ package-lock.json
 *.vi
 *~
 
-# Style.css temporarily to avoid conflicts#
-############################################
+
+# Style files
 style.css

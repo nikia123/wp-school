@@ -90,3 +90,6 @@ package-lock.json
 *.swp
 *.vi
 *~
+
+# Style files
+style.css

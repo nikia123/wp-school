@@ -31,7 +31,7 @@ function bazinga_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
-	/*
+		/*
 		* Let WordPress manage the document title.
 		* By adding theme support, we declare that this theme does not use a
 		* hard-coded <title> tag in the document head, and expect WordPress to
@@ -99,6 +99,10 @@ function bazinga_setup() {
 			'flex-height' => true,
 		)
 	);
+	
+	// Allow full and wide alignment in block editor
+	add_theme_support( 'align-wide' );
+	add_theme_support( 'align-full' );
 }
 add_action( 'after_setup_theme', 'bazinga_setup' );
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * News Page Template
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main main ">
 
 		<?php
 		// display news blog posts
@@ -31,25 +31,49 @@ get_header();
 
 			the_title( '<h1 class="entry-title">', '</h1>' );
 
+
 			while ( $news_posts -> have_posts() ) {
-				$news_posts -> the_post(); ?>
+				$news_posts -> the_post(); 
 
-			
-				<article data-aos="fade-up">
+				   	$image_id = get_post_thumbnail_id();
+					$image_srcset = wp_get_attachment_image_srcset($image_id, 'full');
+					$image_attributes = [
+						'srcset' => $image_srcset,
+						'sizes' => '100vw',
+						'class' => 'news__item-img',
+					];
+					$image_html = wp_get_attachment_image($image_id, 'full', false, $image_attributes);
 
-					<a href=" <?php the_permalink(); ?> ">
-						<h2> <?php the_title(); ?> </h2>
-					</a> 
+				?>
+				<!-- AOS, see js/scroll-animate to adjust -->
+				<article data-aos="fade-up" class="news">
+					<div class="news__item">
+						<a class="news__item-link" href=" <?php the_permalink(); ?> ">
+							<h2 class="news__item-title"> <?php the_title(); ?> </h2>
+						</a> 
+	
+						<p><?php bazinga_posted_on() ?> by <?php bazinga_posted_by() ?></p> 
+	
+						<a href=" <?php the_permalink(); ?> " > 
+							<?php echo $image_html; ?> 
+						</a>
+	
+						<?php the_excerpt(); ?>
+	
+						<p class='container'>
+							<span>
+								Posted in <?php the_category(', '); ?> &nbsp; &nbsp; &nbsp; &nbsp;
+							</span>
+							<span>
+								Tagged with: <?php the_tags(''); ?> &nbsp; &nbsp; &nbsp; &nbsp;
+							</span>
+							<span>
+								<a href="<?php comments_link(); ?>">Leave a comment</a>
+							</span>
+						</p>
 
-					<p><?php bazinga_posted_on() ?> by <?php bazinga_posted_by() ?></p> 
+					</div>
 
-					<a href=" <?php the_permalink(); ?> " > 
-						<?php the_post_thumbnail( 'large' ); ?> 
-					</a>
-
-					<?php the_excerpt(); ?>
-
-					<p>Posted in <?php the_category(', '); ?> | Tagged <?php the_tags(''); ?> | <a href="<?php comments_link(); ?>">Leave a comment</a></p>
 						
 				</article>
 
@@ -65,8 +89,6 @@ get_header();
 			the_post();
 
 			
-
-			// display news blog posts
 
 
 		endwhile; // End of the loop.

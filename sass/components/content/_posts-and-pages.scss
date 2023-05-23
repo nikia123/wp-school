@@ -21,3 +21,65 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+//Home Page
+.page-id-26 {
+
+	.site-main{
+		max-width: 65rem;
+		margin: 0 auto;
+	}
+
+	p, h1, h2, h3 {
+		padding: 0 2rem;
+	}
+
+	.wp-block-heading{
+		text-align: center;
+	}
+	
+
+	.recent-post{
+		
+		display: block;
+		position: relative;
+		margin:1rem auto;
+		max-width: 18.75rem;
+		
+		img {
+			display: block;
+		}			
+
+		h3{
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			margin: 0;
+			padding: 1rem;
+			text-align: center;
+			font-size: 1rem;
+			background: rgba(232, 232, 234, 0.8);
+		}
+		
+	}
+		
+}
+
+@media(min-width: 50em){	
+	.page-id-26{
+
+		.home-blog{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+
+			h2{
+				width: 100%;
+			}
+		}
+	}	
+	
+		
+}

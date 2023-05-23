@@ -42,7 +42,7 @@ function wp_school_register_custom_post_types(){
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'staff' ),
         'capability_type'    => 'post',
-        'has_archive'        => true,
+        'has_archive'        => false,
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-archive',

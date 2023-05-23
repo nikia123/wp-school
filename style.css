@@ -1036,6 +1036,11 @@ textarea {
 	width: auto;
 }
 
+.wp-block-image.alignfull img, .wp-block-image.alignwide img {
+	height: auto;
+	width: 100%;
+}
+
 @media only screen and (min-width: 1300px) {
 	.alignwide {
 		max-width: 1300px;

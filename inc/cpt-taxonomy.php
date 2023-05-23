@@ -46,7 +46,7 @@ function wp_school_register_custom_post_types(){
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-archive',
-        'supports'           => array( 'title', 'thumbnail', 'editor' ),
+        'supports'           => array(),
     );
 
     register_post_type( 'staff', $args );

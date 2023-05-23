@@ -19,7 +19,7 @@ get_header();
 
 		<?php
 
-		get_template_part( 'template-parts/content', 'page' );
+		get_template_part( 'template-parts/content', 'page-staff-and-faculty' );
 
 
 		// display staff posts
@@ -31,11 +31,12 @@ get_header();
 		);
 		if ($terms && !is_wp_error($terms)) {
 			foreach ($terms as $term) {
-				// Output the title for the term
 				?> 
 				<article> <?php
 					
-					echo '<h2>' . $term->name . '</h2>';
+					// Output the title for the term
+					echo '<h2  class="staff-term-title">' . $term->name . '</h2>';
+					
 
 					$args = array(
 						'post_type' 		=> 'staff',
@@ -54,25 +55,26 @@ get_header();
 					$staff_posts = new WP_Query($args);
 
 					if ($staff_posts->have_posts()) {
+						?> <div  class="staff-container"> <?php
 						while ($staff_posts->have_posts()) {
 							$staff_posts->the_post(); ?>
-							
-							<h3> <?php the_field('add_staff_name'); ?> </h3>
-							<p> <?php the_field('add_staff_biography'); ?> </p>
-							<p> <?php the_field('courses_taught'); ?> </p>
-							<a href=<?php the_field('instructor_website') ?> >Instructor Website</a>
+							<div>
+								<!-- ACF fields -->
+								<h3 class="individual-title"> <?php the_field('add_staff_name'); ?> </h3>
+								<p> <?php the_field('add_staff_biography'); ?> </p>
+								<p> <?php the_field('courses_taught'); ?> </p>
+								<?php if ( get_field('instructor_website')) : ?>
+									<a href=<?php the_field('instructor_website') ?> >Instructor Website</a>
+								<?php endif; ?>
+							</div>
 
-				</article>
-
-						<?php
-
+							<?php wp_reset_postdata();
+						}
+						?> </div> <?php
 					}
-
-					wp_reset_postdata();
-				}
-			}
+				?> </article> <?php
+			}	
 		}
-
         
 
 		?>

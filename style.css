@@ -937,6 +937,35 @@ textarea {
 	}
 }
 
+.staff-container {
+	display: flex;
+	flex-direction: column;
+}
+.staff-container .individual-title {
+	font-size: 1.5rem;
+}
+.staff-container p:nth-child(3) {
+	margin-bottom: 0.5rem;
+}
+@media (min-width: 600px) {
+	.staff-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		line-height: 1.75rem;
+	}
+}
+
+.staff-term-title {
+	font-size: 2rem;
+	text-decoration: underline;
+	margin-bottom: 0;
+}
+
+.staff-page-title {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

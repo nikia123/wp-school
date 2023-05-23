@@ -722,6 +722,48 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
+.page-id-26 .site-main {
+	max-width: 65rem;
+	margin: 0 auto;
+}
+.page-id-26 p, .page-id-26 h1, .page-id-26 h2, .page-id-26 h3 {
+	padding: 0 2rem;
+}
+.page-id-26 .wp-block-heading {
+	text-align: center;
+}
+.page-id-26 .recent-post {
+	display: block;
+	position: relative;
+	margin: 1rem auto;
+	max-width: 18.75rem;
+}
+.page-id-26 .recent-post img {
+	display: block;
+}
+.page-id-26 .recent-post h3 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	margin: 0;
+	padding: 1rem;
+	text-align: center;
+	font-size: 1rem;
+	background: rgba(232, 232, 234, 0.8);
+}
+
+@media (min-width: 50em) {
+	.page-id-26 .home-blog {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	.page-id-26 .home-blog h2 {
+		width: 100%;
+	}
+}
 /* Comments
 --------------------------------------------- */
 .comment-content a {

@@ -46,27 +46,23 @@ get_header();
 				while ( $blog_query -> have_posts() ) {
 					$blog_query -> the_post();
 					?>
-					<article>
-						<a href="<?php the_permalink(); ?>">
-							<h3><?php the_title(); ?></h3>
-							<?php 
-							the_post_thumbnail( 'medium' );?>
+					
+					<a  class = "recent-post" href="<?php the_permalink(); ?>">
+						<h3><?php the_title(); ?></h3>
+						<?php 
+						the_post_thumbnail( 'medium' );?>
 							
-						</a>
-					</article>
+					</a>
+					
 					<?php
 				}
 				wp_reset_postdata();
 			}
 			?>
 
-			
-				
-			
 		</section>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

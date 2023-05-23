@@ -138,10 +138,11 @@ function wp_school_register_taxonomies() {
 
 add_action( 'init', 'wp_school_register_taxonomies' );
 
+//add custom post type template for student block editor
 function student_post_template() {
 	$custom_post_type_object = get_post_type_object( 'students' );
 	$custom_post_type_object->template = [
-		[ 'core/paragraph', ['text' => 'Add student name' ], [] ],
+		[ 'core/paragraph', [], [] ],
 		[ 'core/button', [], [] ],
 	];
     $custom_post_type_object->template_lock = 'all';
@@ -149,6 +150,8 @@ function student_post_template() {
 }
 add_action( 'init', 'student_post_template' );
 
+
+//adjust title placeholder text for student block editor
 function change_title_text( $title ){
      $screen = get_current_screen();
  

@@ -121,22 +121,9 @@ add_action( 'after_setup_theme', 'bazinga_content_width', 0 );
 /**
  * Register widget area.
  *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ * @link https://developer.wordpress.org/themes/functionality/
  */
-function bazinga_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar', 'bazinga' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'bazinga' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-add_action( 'widgets_init', 'bazinga_widgets_init' );
+
 
 function bazinga_footer_widget() {
     register_sidebar( array(
@@ -150,6 +137,12 @@ function bazinga_footer_widget() {
     ) );
 }
 add_action( 'widgets_init', 'bazinga_footer_widget' );
+
+//register footer menu widget
+function register_footer_menu() {
+    register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
+}
+add_action( 'after_setup_theme', 'register_footer_menu' );
 
 
 /**
@@ -175,16 +168,12 @@ function bazinga_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bazinga_scripts' );
 
-//register footer menu widget
-function register_footer_menu() {
-    register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
-}
-add_action( 'after_setup_theme', 'register_footer_menu' );
 
-//register custom logo
-//https://developer.wordpress.org/themes/functionality/custom-logo/
-//https://erikainglasses.medium.com/how-to-add-a-custom-theme-logo-in-wordpress-1d3cbb290882
-
+/**
+ * Implement the Custom Header feature.
+ * https://erikainglasses.medium.com/how-to-add-a-custom-theme-logo-in-wordpress-1d3cbb290882
+ * https://developer.wordpress.org/themes/functionality/custom-logo/
+ */
 function bazinga_logo_setup() {
     add_theme_support( 'custom-logo' );
 }

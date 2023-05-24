@@ -138,6 +138,20 @@ function bazinga_widgets_init() {
 }
 add_action( 'widgets_init', 'bazinga_widgets_init' );
 
+function bazinga_footer_widget() {
+    register_sidebar( array(
+        'name'          => __( 'Footer Widget Area', 'bazinga' ),
+        'id'            => 'footer_widget_area',
+        'description'   => __( 'Add widgets here to appear in your footer.', 'bazinga' ),
+        'before_widget' => '<div class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+}
+add_action( 'widgets_init', 'bazinga_footer_widget' );
+
+
 /**
  * Enqueue scripts and styles.
  */
@@ -161,10 +175,21 @@ function bazinga_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bazinga_scripts' );
 
+//register footer menu widget
 function register_footer_menu() {
     register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
 }
 add_action( 'after_setup_theme', 'register_footer_menu' );
+
+//register custom logo
+//https://developer.wordpress.org/themes/functionality/custom-logo/
+//https://erikainglasses.medium.com/how-to-add-a-custom-theme-logo-in-wordpress-1d3cbb290882
+
+function bazinga_logo_setup() {
+    add_theme_support( 'custom-logo' );
+}
+add_action( 'after_setup_theme', 'bazinga_logo_setup' );
+
 
 
 /**

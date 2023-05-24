@@ -1,0 +1,32 @@
+body {
+    margin-bottom: 0 !important;
+}
+
+.site-footer {
+    background: #383838;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    
+    h3,
+    h4 {
+        font-size: 2rem;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .menu {
+        padding: 0;
+        margin: 0;
+
+        .menu-item {
+            list-style-type: none;
+        }
+
+    }
+
+    
+
+}

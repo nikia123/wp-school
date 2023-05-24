@@ -701,11 +701,11 @@ textarea {
 
 button.menu-toggle {
 	margin: 0;
+	margin-right: 0;
 	padding: 0;
-	position: absolute;
-	right: 1rem;
-	top: 3.75rem;
 	background-color: #1f1f1f;
+	margin-left: auto;
+	padding: 0.75rem;
 }
 
 .main-navigation.toggled ul {
@@ -713,9 +713,6 @@ button.menu-toggle {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	position: absolute;
-	right: 0;
-	top: 6.5rem;
 	width: 100%;
 	z-index: 100;
 }
@@ -743,9 +740,6 @@ button.menu-toggle {
 	.main-navigation ul {
 		display: flex;
 		justify-content: flex-end;
-		position: absolute;
-		right: 0;
-		top: 2.25rem;
 	}
 }
 .site-main .comment-navigation,
@@ -802,8 +796,9 @@ header.site-header {
 	background-color: #1f1f1f;
 	text-transform: uppercase;
 	border-top: 5px solid #335aaf;
-	height: 3.75rem;
+	height: 3.8rem;
 	display: flex;
+	justify-content: space-between;
 }
 header.site-header a {
 	color: white;

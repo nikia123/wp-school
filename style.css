@@ -1076,6 +1076,10 @@ header.site-header li a:hover {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		line-height: 1.75rem;
+		gap: 2rem;
+	}
+	.staff-container article.individual-container {
+		padding-right: 1.5rem;
 	}
 }
 

@@ -161,6 +161,12 @@ function bazinga_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bazinga_scripts' );
 
+function register_footer_menu() {
+    register_nav_menu( 'footer-menu', __( 'Footer Menu' ) );
+}
+add_action( 'after_setup_theme', 'register_footer_menu' );
+
+
 /**
  * Implement the Custom Header feature.
  */

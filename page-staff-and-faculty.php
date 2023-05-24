@@ -58,15 +58,18 @@ get_header();
 						?> <div  class="staff-container"> <?php
 						while ($staff_posts->have_posts()) {
 							$staff_posts->the_post(); ?>
-							<div>
+							<article class="individual-container">
 								<!-- ACF fields -->
 								<h3 class="individual-title"> <?php the_field('add_staff_name'); ?> </h3>
 								<p> <?php the_field('add_staff_biography'); ?> </p>
 								<p> <?php the_field('courses_taught'); ?> </p>
+
 								<?php if ( get_field('instructor_website')) : ?>
+
 									<a href=<?php the_field('instructor_website') ?> >Instructor Website</a>
+
 								<?php endif; ?>
-							</div>
+							</article>
 
 							<?php wp_reset_postdata();
 						}

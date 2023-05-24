@@ -19,7 +19,7 @@
 
 			<div id="footer-logo">
 			<?php
-				if ( function_exists( 'the_custom_logo' ) ) {
+				if ( function_exists( 'bazinga_logo_setup' ) ) {
 					the_custom_logo();
 				}
 			?>

@@ -700,10 +700,6 @@ textarea {
 	display: block;
 }
 
-.custom-logo-link .custom-logo {
-	display: none;
-}
-
 button.menu-toggle {
 	margin: 0;
 	padding: 0;
@@ -1104,6 +1100,10 @@ body {
 	color: white;
 	padding: 1rem;
 	text-align: center;
+}
+.site-footer #footer-logo .custom-logo-link .custom-logo {
+	width: 120px;
+	height: 130px;
 }
 .site-footer h3,
 .site-footer h4 {

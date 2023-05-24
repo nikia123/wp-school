@@ -403,6 +403,11 @@ h6 {
 	clear: both;
 }
 
+.entry-title {
+	font-weight: normal;
+	font-size: 3rem;
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -649,10 +654,6 @@ textarea {
 .main-navigation ul ul a {
 	width: 200px;
 }
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
 .main-navigation li {
 	position: relative;
 }
@@ -660,10 +661,79 @@ textarea {
 	display: block;
 	text-decoration: none;
 }
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+	background-color: #335aaf;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	margin: 0;
+	color: white;
+	z-index: 100;
+}
+.menu-toggle svg,
+.main-navigation.toggled ul svg {
 	display: block;
+	max-width: 100%;
+	height: 2rem;
+	width: 2rem;
+	fill: white;
+}
+.menu-toggle li a,
+.main-navigation.toggled ul li a {
+	width: 100%;
+	text-align: center;
+	padding: 1rem;
+	display: block;
+	z-index: 100;
+	background-color: #1f1f1f;
+	display: block;
+}
+
+button.menu-toggle {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 1rem;
+	top: 3.75rem;
+	background-color: #1f1f1f;
+}
+
+.main-navigation.toggled ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: 0;
+	top: 6.5rem;
+	width: 100%;
+	z-index: 100;
+}
+.main-navigation.toggled ul li {
+	width: 100%;
+	background-color: #1f1f1f;
+	display: block;
+}
+.main-navigation.toggled ul a {
+	background-color: #1f1f1f;
+	display: block;
+	width: 100%;
+}
+.main-navigation.toggled ul .current_page_item > a,
+.main-navigation.toggled ul .current-menu-item > a,
+.main-navigation.toggled ul .current_page_ancestor > a,
+.main-navigation.toggled ul .current-menu-ancestor > a {
+	background-color: #335aaf;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -672,6 +742,10 @@ textarea {
 	}
 	.main-navigation ul {
 		display: flex;
+		justify-content: flex-end;
+		position: absolute;
+		right: 0;
+		top: 2.25rem;
 	}
 }
 .site-main .comment-navigation,
@@ -694,6 +768,56 @@ textarea {
 .post-navigation .nav-next {
 	text-align: end;
 	flex: 1 0 50%;
+}
+
+.site-branding {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+.site-branding p.site-title {
+	margin: 0;
+	padding: 0;
+}
+.site-branding p.site-title a {
+	font-size: 1.5rem;
+	display: block;
+	margin: 0;
+	padding: 0.6rem 1rem;
+	text-decoration: none;
+}
+.site-branding p.site-title a:hover {
+	background-color: #335aaf;
+}
+.site-branding .site-description {
+	font-size: 1.125em;
+	font-weight: 400;
+	margin: 0;
+}
+
+header.site-header {
+	background-color: #1f1f1f;
+	text-transform: uppercase;
+	border-top: 5px solid #335aaf;
+	height: 3.75rem;
+	display: flex;
+}
+header.site-header a {
+	color: white;
+	text-decoration: none;
+	font-weight: 700;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+header.site-header li a {
+	padding: 1rem;
+}
+header.site-header li a:hover {
+	background-color: #335aaf;
 }
 
 /* Posts and pages

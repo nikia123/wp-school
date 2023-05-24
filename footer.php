@@ -13,10 +13,33 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bazinga' ), 'bazinga', '<a href="https://wp.bcitwebdeveloper.ca">Nikia Shaw & Kate Khymochka</a>' );
-				?>
+
+			<!-- logo -->
+			<!-- https://www.sktthemes.org/wordpress/add-custom-widget-area-wordpress-themes/ -->
+
+			<div id="footer-logo">
+			<?php
+				if ( function_exists( 'the_custom_logo' ) ) {
+					the_custom_logo();
+				}
+			?>
+			</div>
+
+			
+			
+			<h4>Credits:</h4>
+			
+			<?php
+			/* translators: 1: Theme name, 2: Theme author. */
+			printf( esc_html__( 'Theme: %1$s by %2$s.', 'bazinga' ), 'bazinga', '<a href="https://wp.bcitwebdeveloper.ca">Nikia Shaw & Kate Khymochka</a>' );
+			?>
+
+			<p>Photos courtesy of <a href="https://burst.shopify.com">Burst </a></p>
+
+			<div id="footer-widget-area">
+				<?php dynamic_sidebar( 'footer_widget_area' ); ?>
+			</div>
+
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

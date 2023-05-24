@@ -464,6 +464,7 @@ big {
 --------------------------------------------- */
 body {
 	background: #fff;
+	margin-bottom: 0;
 }
 
 hr {
@@ -697,6 +698,10 @@ textarea {
 	z-index: 100;
 	background-color: #1f1f1f;
 	display: block;
+}
+
+.custom-logo-link .custom-logo {
+	display: none;
 }
 
 button.menu-toggle {
@@ -1088,6 +1093,33 @@ header.site-header li a:hover {
 .staff-page-title {
 	font-size: 1.5rem;
 	font-weight: 300;
+}
+
+body {
+	margin-bottom: 0 !important;
+}
+
+.site-footer {
+	background: #383838;
+	color: white;
+	padding: 1rem;
+	text-align: center;
+}
+.site-footer h3,
+.site-footer h4 {
+	font-size: 2rem;
+}
+.site-footer a {
+	color: white;
+	text-decoration: none;
+	font-weight: 700;
+}
+.site-footer .menu {
+	padding: 0;
+	margin: 0;
+}
+.site-footer .menu .menu-item {
+	list-style-type: none;
 }
 
 /*--------------------------------------------------------------

@@ -212,3 +212,6 @@ require get_template_directory() . '/inc/cpt-taxonomy.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+//add
+add_image_size( 'student-type', 200, 300, true );

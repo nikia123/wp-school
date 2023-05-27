@@ -67,7 +67,7 @@ function wp_school_register_custom_post_types(){
         'parent_item_colon'     => __( 'Parent Student:' ),
         'not_found'             => __( 'No Students found.' ),
         'not_found_in_trash'    => __( 'No Students found in Trash.' ),
-        'archives'              => __( 'Student Archives'),
+        'archives'              => __( 'Students Archives'),
         'insert_into_item'      => __( 'Insert into Student'),
         'uploaded_to_this_item' => __( 'Uploaded to this Student item'),
         'filter_item_list'      => __( 'Filter Student list'),
@@ -91,14 +91,15 @@ function wp_school_register_custom_post_types(){
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'students' ),
         'capability_type'    => 'post',
-        'has_archive'        => false,
+        'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-buddicons-groups',
-        'supports'           => array(),
+        'supports'           => array( 'title', 'thumbnail', 'editor' ),
     );
 
     register_post_type( 'students', $args );
+
 }
 
 add_action ( 'init', 'wp_school_register_custom_post_types' );
@@ -133,6 +134,34 @@ function wp_school_register_taxonomies() {
     );
 
     register_taxonomy( 'staff-type', array( 'staff' ), $args );
+
+    //add students taxonomy
+    $labels = array(
+        'name'              => _x( 'Students Types', 'taxonomy general name' ),
+        'singular_name'     => _x( 'Students Type', 'taxonomy singular name' ),
+        'search_items'      => __( 'Search Students Types' ),
+        'all_items'         => __( 'All Students Type' ),
+        'parent_item'       => __( 'Parent Students Type' ),
+        'parent_item_colon' => __( 'Parent Students Type:' ),
+        'edit_item'         => __( 'Edit Students Type' ),
+        'view_item'         => __( 'Vview Students Type' ),
+        'update_item'       => __( 'Update Students Type' ),
+        'add_new_item'      => __( 'Add New Students Type' ),
+        'new_item_name'     => __( 'New Students Type Name' ),
+        'menu_name'         => __( 'Students Type' ),
+    );
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_in_menu'      => true,
+        'show_in_nav_menu'  => true,
+        'show_in_rest'      => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'students-type' ),
+    );
+    register_taxonomy( 'students-type', array( 'students'), $args );
 
 }
 

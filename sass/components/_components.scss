@@ -1,10 +1,20 @@
 /* Navigation
 --------------------------------------------- */
 @import "navigation/navigation";
+@import "components/navigation/footer";
 
 /* Posts and pages
 --------------------------------------------- */
 @import "content/posts-and-pages";
+@import "content/home";
+@import"content/schedule";
+@import "content/students";
+@import "components/content/news";
+@import "components/content/staff";
+
+/* Layouts
+--------------------------------------------- */
+@import "layouts/no-sidebar";
 
 /* Comments
 --------------------------------------------- */

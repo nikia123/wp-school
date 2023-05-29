@@ -1,0 +1,50 @@
+//Schedule Page
+.page-id-63 {
+	table {
+		border-collapse: collapse;
+
+		th, tr, td{
+			display: block;
+		
+		}
+
+		th {
+			text-align: left;
+			
+		}
+
+		tr {
+			background: rgba(232, 232, 234, 0.8);
+			padding: 1rem;
+
+		}
+
+		tbody{
+
+			tr:nth-child(odd){
+					background-color:rgba(255, 255, 255);
+				}
+		}
+	}
+	
+}
+
+@media (min-width:37.5em){
+	.page-id-63{
+
+		table {
+			
+			tr{
+				display: table-row;
+			}
+	
+			th, td{
+				width: 33%;
+				text-align: center;
+				padding: 1.5rem;
+				display: table-cell;
+			}
+		}
+		
+	}
+}

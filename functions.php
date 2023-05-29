@@ -149,6 +149,13 @@ add_action( 'after_setup_theme', 'register_footer_menu' );
  * Enqueue scripts and styles.
  */
 function bazinga_scripts() {
+	wp_enqueue_style( 
+		'fwd-googlefonts', 
+		'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap',
+		array(),// to skip dependecies
+		null // set null if loading multiple Google Fonts from their CDN
+	);
+
 	wp_enqueue_style( 'bazinga-style', get_stylesheet_uri(), array(), _S_VERSION );
 
 	wp_style_add_data( 'bazinga-style', 'rtl', 'replace' );

@@ -1,0 +1,44 @@
+// Students Page
+.post-type-archive-students{
+	h2{
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	
+}
+
+@media(min-width:37.5em){
+	.post-type-archive-students{
+
+		.students-container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+
+			article {
+				width: 45%;
+			}
+
+			img{
+				width: 18.75rem;
+				height: 12.5rem;
+				object-fit: cover;
+			}
+		}
+	}
+		
+}
+
+@media(min-width:56.25em){
+	.post-type-archive-students{
+
+		.students-container{
+			
+			article {
+				width: 30%;
+			}
+			
+		}
+	}
+}

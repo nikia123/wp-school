@@ -24,10 +24,11 @@ get_header();
 			<article>
 				<a href="<?php the_permalink(); ?>">
 					<h2><?php the_title(); ?></h2>
-					<?php the_post_thumbnail('student-type'); ?>
+					<?php the_post_thumbnail('student-type', array('class' => 'alignleft')); ?>
 							
 				</a>
 				<?php the_content(); ?>
+				
 			</article>
 			<?php
 		endwhile;

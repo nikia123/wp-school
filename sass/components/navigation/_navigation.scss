@@ -7,6 +7,32 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		width: 100%;
+		
+		#menu-item-77 {
+			padding-top: 7rem;
+			height: fit-content;
+		}
+
+		.sub-menu {
+			
+			position: absolute;
+			top: auto;
+			left: auto;
+			z-index: 1 !important;
+			
+			#menu-item-99, 
+			#menu-item-100 {
+				background-color: rgb(90, 90, 90);
+
+				a {
+					background-color: transparent;
+				}
+
+			}
+
+		}
+
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -14,12 +40,7 @@
 			position: absolute;
 			top: 100%;
 			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
+			z-index: 200;
 
 			li {
 
@@ -40,7 +61,7 @@
 
 	li {
 		position: relative;
-
+		height: 3.5rem;
 	}
 
 	a {
@@ -78,15 +99,11 @@
 	}
 
 	li a {
-		//make the menu items full width
 		width: 100%;
 		text-align: center;
 		padding: 1rem;
 		display: block;
-		z-index: 100;
 		background-color: #1f1f1f;;
-		display: block;
-
 	}
 
 }
@@ -131,7 +148,7 @@ button.menu-toggle {
 }
 
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 37.5rem) {
 
 	.menu-toggle {
 		display: none;
@@ -142,6 +159,48 @@ button.menu-toggle {
 		justify-content: flex-end;
 
 	}
+
+	#menu-item-77 {
+		padding-top: 0 !important;
+		height: 3.5rem !important;
+	}
+
+
+		
+	#menu-item-99, 
+	#menu-item-100 {
+		background-color: rgb(90, 90, 90);
+
+		
+		a {
+			background-color: transparent;
+			&:hover {
+			
+			}
+		}
+	}
+
+		
+
+	#menu-item-101 {
+
+		.sub-menu {
+			display: none;
+		}
+
+		&:hover {
+			.sub-menu {
+				display: flex;
+				flex-direction: column;
+				background-color: rgb(65, 64, 64);
+				position: absolute;
+				top: auto;
+				left: auto;
+				width: fit-content;
+			}
+		}
+	}
+
 }
 
 .comment-navigation,
@@ -183,7 +242,7 @@ button.menu-toggle {
 			font-size: 1.5rem;
 			display: block;
 			margin: 0;
-			padding: .6rem 1rem;
+			padding: 0rem 1rem;
 			text-decoration: none;
 
 			&:hover {

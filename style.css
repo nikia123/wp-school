@@ -650,7 +650,7 @@ textarea {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-areas: "search post-heading schedule category-heading" "search post-content schedule category-content";
+	grid-template-areas: "search post schedule category" "search post schedule category";
 	padding: 2rem 1rem;
 }
 .widget-area .sidebar-grid .wp-block-search__inside-wrapper {
@@ -698,6 +698,26 @@ textarea {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	width: 100%;
+}
+.main-navigation ul #menu-item-77 {
+	padding-top: 7rem;
+	height: -moz-fit-content;
+	height: fit-content;
+}
+.main-navigation ul .sub-menu {
+	position: absolute;
+	top: auto;
+	left: auto;
+	z-index: 1 !important;
+}
+.main-navigation ul .sub-menu #menu-item-99,
+.main-navigation ul .sub-menu #menu-item-100 {
+	background-color: rgb(90, 90, 90);
+}
+.main-navigation ul .sub-menu #menu-item-99 a,
+.main-navigation ul .sub-menu #menu-item-100 a {
+	background-color: transparent;
 }
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -705,11 +725,7 @@ textarea {
 	position: absolute;
 	top: 100%;
 	left: -999em;
-	z-index: 99999;
-}
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
+	z-index: 200;
 }
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
 	display: block;
@@ -720,6 +736,7 @@ textarea {
 }
 .main-navigation li {
 	position: relative;
+	height: 3.5rem;
 }
 .main-navigation a {
 	display: block;
@@ -758,9 +775,7 @@ textarea {
 	text-align: center;
 	padding: 1rem;
 	display: block;
-	z-index: 100;
 	background-color: #1f1f1f;
-	display: block;
 }
 
 button.menu-toggle {
@@ -797,13 +812,38 @@ button.menu-toggle {
 	background-color: #335aaf;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 37.5rem) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
 		display: flex;
 		justify-content: flex-end;
+	}
+	#menu-item-77 {
+		padding-top: 0 !important;
+		height: 3.5rem !important;
+	}
+	#menu-item-99,
+	#menu-item-100 {
+		background-color: rgb(90, 90, 90);
+	}
+	#menu-item-99 a,
+	#menu-item-100 a {
+		background-color: transparent;
+	}
+	#menu-item-101 .sub-menu {
+		display: none;
+	}
+	#menu-item-101:hover .sub-menu {
+		display: flex;
+		flex-direction: column;
+		background-color: rgb(65, 64, 64);
+		position: absolute;
+		top: auto;
+		left: auto;
+		width: -moz-fit-content;
+		width: fit-content;
 	}
 }
 .site-main .comment-navigation,
@@ -844,7 +884,7 @@ button.menu-toggle {
 	font-size: 1.5rem;
 	display: block;
 	margin: 0;
-	padding: 0.6rem 1rem;
+	padding: 0rem 1rem;
 	text-decoration: none;
 }
 .site-branding p.site-title a:hover {

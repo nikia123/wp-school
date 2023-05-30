@@ -628,6 +628,62 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.site {
+	display: grid;
+	grid-template-columns: auto 25%;
+	grid-template-areas: "header header" "main main" "sidebar sidebar" "footer footer";
+}
+
+.site-header {
+	grid-area: header;
+}
+
+.site-main {
+	grid-area: main;
+	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.widget-area {
+	grid-area: sidebar;
+}
+.widget-area .sidebar-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: "search post-heading schedule category-heading" "search post-content schedule category-content";
+	padding: 2rem 1rem;
+}
+.widget-area .sidebar-grid .wp-block-search__inside-wrapper {
+	grid-area: search;
+	flex-direction: column;
+	padding: 1rem;
+}
+.widget-area .sidebar-grid .wp-block-search__inside-wrapper button {
+	background-color: #335aaf;
+	color: white;
+	padding: 1rem;
+	margin-left: 0;
+}
+
+.site-footer {
+	grid-area: footer;
+}
+
+.no-sidebar .site {
+	display: grid;
+	grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+	grid-template-areas: "header header header" ". main ." "footer footer footer";
+}
+.no-sidebar .site-header {
+	grid-area: header;
+}
+.no-sidebar .site-main {
+	grid-area: main;
+}
+.no-sidebar .site-footer {
+	grid-area: footer;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/

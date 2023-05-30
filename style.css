@@ -717,18 +717,18 @@ textarea {
 	grid-area: footer;
 }
 
-.no-sidebar .site {
+.no-sidebar .site, .page-id-26 .site, .page-id-63 .site, .post-type-archive-students .site, .single-students .site, .tax-students-type .site {
 	display: grid;
 	grid-template-columns: 1fr minmax(0, 1000px) 1fr;
 	grid-template-areas: "header header header" ". main ." "footer footer footer";
 }
-.no-sidebar .site-header {
+.no-sidebar .site-header, .page-id-26 .site-header, .page-id-63 .site-header, .post-type-archive-students .site-header, .single-students .site-header, .tax-students-type .site-header {
 	grid-area: header;
 }
-.no-sidebar .site-main {
+.no-sidebar .site-main, .page-id-26 .site-main, .page-id-63 .site-main, .post-type-archive-students .site-main, .single-students .site-main, .tax-students-type .site-main {
 	grid-area: main;
 }
-.no-sidebar .site-footer {
+.no-sidebar .site-footer, .page-id-26 .site-footer, .page-id-63 .site-footer, .post-type-archive-students .site-footer, .single-students .site-footer, .tax-students-type .site-footer {
 	grid-area: footer;
 }
 
@@ -1221,18 +1221,18 @@ body {
 
 /* Layouts
 --------------------------------------------- */
-.no-sidebar .site {
+.no-sidebar .site, .page-id-26 .site, .page-id-63 .site, .post-type-archive-students .site, .single-students .site, .tax-students-type .site {
 	display: grid;
 	grid-template-columns: 1fr minmax(0, 1000px) 1fr;
 	grid-template-areas: "header header header" ". main ." "footer footer footer";
 }
-.no-sidebar .site-header {
+.no-sidebar .site-header, .page-id-26 .site-header, .page-id-63 .site-header, .post-type-archive-students .site-header, .single-students .site-header, .tax-students-type .site-header {
 	grid-area: header;
 }
-.no-sidebar .site-main {
+.no-sidebar .site-main, .page-id-26 .site-main, .page-id-63 .site-main, .post-type-archive-students .site-main, .single-students .site-main, .tax-students-type .site-main {
 	grid-area: main;
 }
-.no-sidebar .site-footer {
+.no-sidebar .site-footer, .page-id-26 .site-footer, .page-id-63 .site-footer, .post-type-archive-students .site-footer, .single-students .site-footer, .tax-students-type .site-footer {
 	grid-area: footer;
 }
 

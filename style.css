@@ -647,22 +647,70 @@ textarea {
 	grid-area: sidebar;
 }
 .widget-area .sidebar-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-areas: "search post schedule category" "search post schedule category";
-	padding: 2rem 1rem;
+	display: flex;
+	flex-direction: column;
 }
-.widget-area .sidebar-grid .wp-block-search__inside-wrapper {
-	grid-area: search;
+.widget-area section {
+	padding: 0.5rem 1rem;
+}
+.widget-area .wp-block-search__inside-wrapper {
 	flex-direction: column;
 	padding: 1rem;
 }
-.widget-area .sidebar-grid .wp-block-search__inside-wrapper button {
+.widget-area .wp-block-search__inside-wrapper button {
 	background-color: #335aaf;
 	color: white;
 	padding: 1rem;
 	margin-left: 0;
+}
+.widget-area .wp-block-calendar table.wp-calendar-table {
+	padding-right: 1rem;
+}
+.widget-area .wp-block-calendar table.wp-calendar-table td {
+	border: none;
+}
+.widget-area .wp-block-calendar table.wp-calendar-table th {
+	font-weight: bold;
+	background-color: white;
+	border: none;
+}
+@media (min-width: 701px) {
+	.widget-area .sidebar-grid {
+		display: grid !important;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-areas: "search post calendar category" "search post calendar category";
+		gap: 1rem;
+		padding: 2rem 1rem;
+	}
+	.widget-area .sidebar-grid li {
+		list-style: square;
+	}
+	.widget-area .sidebar-grid h2 {
+		text-align: center;
+	}
+	.widget-area .sidebar-grid .wp-block-search__inside-wrapper {
+		grid-area: search;
+		flex-direction: column;
+		padding: 1rem;
+	}
+	.widget-area .sidebar-grid .wp-block-search__inside-wrapper button {
+		background-color: #335aaf;
+		color: white;
+		padding: 1rem;
+		margin-left: 0;
+	}
+	.widget-area .sidebar-grid .wp-block-calendar table.wp-calendar-table {
+		padding-right: 1rem;
+	}
+	.widget-area .sidebar-grid .wp-block-calendar table.wp-calendar-table td {
+		border: none;
+	}
+	.widget-area .sidebar-grid .wp-block-calendar table.wp-calendar-table th {
+		font-weight: bold;
+		background-color: white;
+		border: none;
+	}
 }
 
 .site-footer {
@@ -886,9 +934,6 @@ button.menu-toggle {
 	margin: 0;
 	padding: 0rem 1rem;
 	text-decoration: none;
-}
-.site-branding p.site-title a:hover {
-	background-color: #335aaf;
 }
 .site-branding .site-description {
 	font-size: 1.125em;

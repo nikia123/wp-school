@@ -741,6 +741,9 @@ textarea {
 	display: block;
 	width: 100%;
 }
+.main-navigation #primary-men {
+	z-index: 1000;
+}
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -757,7 +760,6 @@ textarea {
 	position: absolute;
 	top: auto;
 	left: auto;
-	z-index: 1 !important;
 }
 .main-navigation ul .sub-menu #menu-item-99,
 .main-navigation ul .sub-menu #menu-item-100 {
@@ -807,7 +809,7 @@ textarea {
 	border: none;
 	margin: 0;
 	color: white;
-	z-index: 100;
+	z-index: 300;
 }
 .menu-toggle svg,
 .main-navigation.toggled ul svg {

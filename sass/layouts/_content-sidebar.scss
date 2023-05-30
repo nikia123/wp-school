@@ -20,39 +20,99 @@
 .widget-area {
 	grid-area: sidebar;
 
-	.sidebar-grid {
-	display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-areas: 
-		"search post schedule category"
-		"search post schedule category";
+		.sidebar-grid {
+			display: flex;
+			flex-direction: column;
+		}
+		section {
+			padding: .5rem 1rem;
+		}
 		
-		padding: 2rem 1rem;
-
-
 		.wp-block-search__inside-wrapper {
-			grid-area: search;
 			flex-direction: column;
 			padding: 1rem;
-
+	
 			button {
 				background-color: #335aaf;
 				color: white;
 				padding: 1rem;
 				margin-left: 0;
 			}
-
-			
-
 		}
 
+		.wp-block-calendar table.wp-calendar-table {
+	
+			padding-right: 1rem;
+	
+			td {
+	
+				border: none;
+			}
+			
+			th {
+				font-weight: bold;
+				background-color: white;
+				border: none;
+			}
+		}
+
+
+	
+	@media (min-width: 701px) {
+		.sidebar-grid {
+			display: grid !important;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-areas: 
+			"search post calendar category"
+			"search post calendar category";
+			gap: 1rem;
+			padding: 2rem 1rem;
+			
+			li {
+				list-style: square;
+			}
+			
+			h2 {
+				text-align: center;
+			}
+			
+			.wp-block-search__inside-wrapper {
+				grid-area: search;
+				flex-direction: column;
+				padding: 1rem;
+		
+				button {
+					background-color: #335aaf;
+					color: white;
+					padding: 1rem;
+					margin-left: 0;
+				}
+			}
+		
+			.wp-block-calendar table.wp-calendar-table {
+		
+				padding-right: 1rem;
+		
+				td {
+		
+					border: none;
+				}
+				
+				th {
+					font-weight: bold;
+					background-color: white;
+					border: none;
+				}
+
+			}
+		
+		}
 	}
-
-
-
-
 }
+
+
+
 
 
 

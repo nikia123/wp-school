@@ -3,6 +3,11 @@
     max-width: 1200px;
     width: 100%;
     padding: 1rem 2rem;
+
+    h1 {
+        padding-top: 4rem; //nav height
+    }
+
     .news {
         .news__item {
             width: 100%;

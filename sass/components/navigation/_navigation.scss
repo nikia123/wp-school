@@ -37,7 +37,6 @@
 			position: absolute;
 			top: auto;
 			left: auto;
-			display: none;
 			
 			//designer/developer sub items
 			#menu-item-99, 
@@ -190,6 +189,9 @@ button.menu-toggle {
 	}
 
 
+	.sub-menu {
+		display: none;
+	}
 		
 	#menu-item-99, 
 	#menu-item-100 {

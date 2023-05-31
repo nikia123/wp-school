@@ -779,7 +779,6 @@ textarea {
 	position: absolute;
 	top: auto;
 	left: auto;
-	display: none;
 }
 .main-navigation ul .sub-menu #menu-item-99,
 .main-navigation ul .sub-menu #menu-item-100 {
@@ -897,6 +896,9 @@ button.menu-toggle {
 	#menu-item-77 {
 		padding-top: 0 !important;
 		height: 3.5rem !important;
+	}
+	.sub-menu {
+		display: none;
 	}
 	#menu-item-99,
 	#menu-item-100 {

@@ -779,6 +779,7 @@ textarea {
 	position: absolute;
 	top: auto;
 	left: auto;
+	display: none;
 }
 .main-navigation ul .sub-menu #menu-item-99,
 .main-navigation ul .sub-menu #menu-item-100 {
@@ -829,6 +830,10 @@ textarea {
 	margin: 0;
 	color: white;
 	z-index: 300;
+}
+.menu-toggle .sub-menu,
+.main-navigation.toggled ul .sub-menu {
+	display: flex;
 }
 .menu-toggle svg,
 .main-navigation.toggled ul svg {

@@ -37,6 +37,7 @@
 			position: absolute;
 			top: auto;
 			left: auto;
+			display: none;
 			
 			//designer/developer sub items
 			#menu-item-99, 
@@ -107,6 +108,10 @@
 	margin: 0;
 	color: white;
 	z-index: 300;
+
+	.sub-menu {
+		display: flex;
+	}
 
 
 	svg {

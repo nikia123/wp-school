@@ -898,7 +898,7 @@ button.menu-toggle {
 		height: 3.5rem !important;
 	}
 	.sub-menu {
-		display: none;
+		display: none !important;
 	}
 	#menu-item-99,
 	#menu-item-100 {

@@ -14,7 +14,15 @@
 
 .site-main {
 	grid-area: main;
+	padding-top: 4rem; // size of the fixed header
 	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+
+	&.single-post {
+		margin: 0 auto;
+		max-width: 1200px;
+		width: 100%;
+		padding: 1rem 2rem;
+	}
 }
 
 .widget-area {

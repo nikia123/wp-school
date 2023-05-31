@@ -640,7 +640,14 @@ textarea {
 
 .site-main {
 	grid-area: main;
+	padding-top: 4rem;
 	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+.site-main.single-post {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+	padding: 1rem 2rem;
 }
 
 .widget-area {
@@ -737,12 +744,25 @@ textarea {
 --------------------------------------------------------------*/
 /* Navigation
 --------------------------------------------- */
+.site-header {
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+}
+
 .main-navigation {
 	display: block;
 	width: 100%;
 }
 .main-navigation #primary-menu {
 	z-index: 1000;
+}
+.main-navigation .menu-main-navigation-container {
+	text-align: center;
+	position: absolute;
+	left: -130.64px;
+	right: 0;
+	width: calc(100% + 130.64px);
 }
 .main-navigation ul {
 	display: none;
@@ -896,22 +916,18 @@ button.menu-toggle {
 		width: fit-content;
 	}
 }
-.site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
 	margin: 0 0 1.5em;
 }
-.comment-navigation .nav-links,
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
 	display: flex;
 }
-.comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
 	flex: 1 0 50%;
 }
-.comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
 	text-align: end;
@@ -1125,6 +1141,9 @@ body {
 	width: 100%;
 	padding: 1rem 2rem;
 }
+.main h1 {
+	padding-top: 4rem;
+}
 .main .news .news__item {
 	width: 100%;
 }
@@ -1219,6 +1238,7 @@ body {
 .staff-page-title {
 	font-size: 1.5rem;
 	font-weight: 300;
+	padding-top: 4rem;
 }
 
 /* Layouts

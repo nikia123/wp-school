@@ -1,9 +1,23 @@
+.site-header {
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+}
+
 .main-navigation {
 	display: block;
 	width: 100%;
 
 	#primary-menu {
 		z-index: 1000;
+	}
+
+	.menu-main-navigation-container {
+		text-align: center;
+		position: absolute;
+		left: -130.64px; //width of the site-branding container (title, "school")
+		right: 0;
+		width: calc(100% + 130.64px); //100% width of parent container plus the width of site-branding container
 	}
 
 	ul {
@@ -13,19 +27,19 @@
 		padding-left: 0;
 		width: 100%;
 
-		
-		
+		// schedule item, located just below students
 		#menu-item-77 {
-			padding-top: 7rem;
+			padding-top: 7rem; // height of students and its sub items
 			height: fit-content;
 		}
 
+		//sub menu is the sub items of students
 		.sub-menu {
-			
 			position: absolute;
 			top: auto;
 			left: auto;
 			
+			//designer/developer sub items
 			#menu-item-99, 
 			#menu-item-100 {
 				background-color: rgb(90, 90, 90);
@@ -74,6 +88,7 @@
 		text-decoration: none;
 	}
 
+	//current page highlights
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
@@ -114,7 +129,6 @@
 }
 
 
-
 button.menu-toggle {
 	margin: 0;
 	margin-right: 0;
@@ -124,6 +138,7 @@ button.menu-toggle {
 	padding: .75rem;
 }
 
+//when small menu toggled on
 .main-navigation.toggled ul {
 	display: flex;
 	flex-direction: column;
@@ -176,12 +191,8 @@ button.menu-toggle {
 	#menu-item-100 {
 		background-color: rgb(90, 90, 90);
 
-		
 		a {
 			background-color: transparent;
-			&:hover {
-			
-			}
 		}
 	}
 
@@ -208,7 +219,7 @@ button.menu-toggle {
 
 }
 
-.comment-navigation,
+
 .posts-navigation,
 .post-navigation {
 
@@ -271,10 +282,6 @@ header.site-header {
 	display: flex;
 	justify-content: space-between;
 
-	@media (min-width: 600px){
-
-
-	}
 
 	a {
 		color: white;

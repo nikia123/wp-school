@@ -900,6 +900,9 @@ button.menu-toggle {
 	.sub-menu {
 		display: none !important;
 	}
+	.sub-menu:hover {
+		display: flex !important;
+	}
 	#menu-item-99,
 	#menu-item-100 {
 		background-color: rgb(90, 90, 90);

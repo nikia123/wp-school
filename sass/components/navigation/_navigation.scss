@@ -191,6 +191,9 @@ button.menu-toggle {
 
 	.sub-menu {
 		display: none !important;
+		&:hover {
+			display: flex !important;
+		}
 	}
 		
 	#menu-item-99, 

@@ -830,6 +830,10 @@ textarea {
 	color: white;
 	z-index: 300;
 }
+.menu-toggle .sub-menu,
+.main-navigation.toggled ul .sub-menu {
+	display: flex;
+}
 .menu-toggle svg,
 .main-navigation.toggled ul svg {
 	display: block;
@@ -892,6 +896,9 @@ button.menu-toggle {
 	#menu-item-77 {
 		padding-top: 0 !important;
 		height: 3.5rem !important;
+	}
+	.sub-menu {
+		display: none;
 	}
 	#menu-item-99,
 	#menu-item-100 {

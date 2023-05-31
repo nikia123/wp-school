@@ -108,6 +108,10 @@
 	color: white;
 	z-index: 300;
 
+	.sub-menu {
+		display: flex;
+	}
+
 
 	svg {
 		display: block;
@@ -185,6 +189,9 @@ button.menu-toggle {
 	}
 
 
+	.sub-menu {
+		display: none;
+	}
 		
 	#menu-item-99, 
 	#menu-item-100 {

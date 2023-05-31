@@ -911,11 +911,11 @@ button.menu-toggle {
 	#menu-item-100 a {
 		background-color: transparent;
 	}
-	#menu-item-101 .sub-menu {
+	#menu-item-111 .sub-menu {
 		display: none;
 	}
-	#menu-item-101:hover .sub-menu {
-		display: flex;
+	#menu-item-111:hover .sub-menu {
+		display: flex !important;
 		flex-direction: column;
 		background-color: rgb(65, 64, 64);
 		position: absolute;

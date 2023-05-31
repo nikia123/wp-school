@@ -207,7 +207,7 @@ button.menu-toggle {
 
 		
 
-	#menu-item-101 {
+	#menu-item-111 {
 
 		.sub-menu {
 			display: none;
@@ -215,7 +215,7 @@ button.menu-toggle {
 
 		&:hover {
 			.sub-menu {
-				display: flex;
+				display: flex !important;
 				flex-direction: column;
 				background-color: rgb(65, 64, 64);
 				position: absolute;

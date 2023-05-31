@@ -755,7 +755,7 @@ textarea {
 	width: 100%;
 }
 .main-navigation #primary-menu {
-	z-index: 1000;
+	position: relative;
 }
 .main-navigation .menu-main-navigation-container {
 	text-align: center;
